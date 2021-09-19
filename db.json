@@ -1,9 +1,42 @@
 {
     "posts": [
       {
-        "id": 1,
+        "tipo": "success",
         "title": "hello"
       }
+    ],
+    "gets":[
+        {
+            "tipo":"success",
+            "mensaje":"Datos guardados con éxito",
+            "título": "Guardo Correctamente",
+            "data": {
+                "tercero":{
+                    "direccion":"Prueba prueba",
+                    "nomCompleto":"JUAN MIGUEL SANCHEZ DIAZ",
+                    "indCrearTercero":"N",
+                    "estadoCivil":"Z",
+                    "tipoPersona":"N",
+                    "telefono":"",
+                    "apellidoPaterno":"Sanchez",
+                    "sexo": "M",
+                    "indRequiereDireccion": "N",
+                    "paisNacimiento": "80",
+                    "nombres": "JUAN MIGUEL",
+                    "stsTercero": "0",
+                    "tipoDocumento": "2",
+                    "apellidoMaterno":"Díaz",
+                    "numDocumento": "25809150",
+                    "fecNacimiento": "11/05/1972",
+                    "correo":""
+                },
+                "error":{
+                    "codigo": "201009",
+                    "mensajedev": null,
+                    "mensajeux": "La búsqueda de tercero fue exitoso"
+                }
+            }
+        }
     ],
     "profile": {
       "name": "typicode"
