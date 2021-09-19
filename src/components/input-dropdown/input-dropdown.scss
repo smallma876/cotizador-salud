@@ -52,4 +52,19 @@
         transform: scale(.85) translateY(-.5rem) translateX(1.3rem);
     }
 
+    .inputdropdown--invalid &__select, &__select:focus{
+        
+        border: 1px solid #e22323;
+        color: #e22323; 
+    }
+    
+    .inputdropdown--invalid &__text{
+           
+            border: 1px solid #e22323;
+            color: #e22323;
+        }
+    
+    &__error{
+        color: #e22323;
+    }
 }

@@ -1,66 +1,45 @@
 import { FormEvent, useContext } from "react";
 import { useHistory } from "react-router";
 import BreadCrumb from "../../../../components/bread-crumb/bread-crumb";
-import InputCheckbox from "../../../../components/input-checkbox/input-checkbox";
 import InputDate from "../../../../components/input-date/input-date";
 import InputDropdown from "../../../../components/input-dropdown/input-dropdown";
 import InputRadio from "../../../../components/input-radio/input-radio";
 import InputText from "../../../../components/input-text/input-text";
-import PrimaryButton from "../../../../components/primary-button/primary-button";
 import SecondaryButton from "../../../../components/secondary-button/secondary-button";
 import { AppContext } from "../../../../context/context/context";
+import useChangeFieldsPersonal from "../../../../hooks/use-change-fieldspersonal";
+import useValidFormPersonal from "../../../../hooks/use-valid-formpersonal";
 import './form-personal-information.scss'
 
 const FormPersonalInformation = () => {
 
     const history = useHistory();
+    const { onChangeTypeDocument,onChangeNumberDocument, onChangeNames, onChangePaternal, onChangeMaternal,
+        onChangeDateOfBirth, onChangeGender, onChangeInsured }  = useChangeFieldsPersonal();
+
+    const { isValidFormPersonal,isValidDocumentTypePersonal, isValidDocumentNumberPersonal,  
+            isValidNamesPersonal,isValidPaternoPersonal, isValidMaternoPersonal,
+            isValidBirthDatePersonal, isValidGenderPersonal, isValidInsuredPersonal } = useValidFormPersonal();    
 
     const { appState, dispatch } = useContext(AppContext);
-
-    const onChangeTypeDocument = (number:string) => {
-        dispatch({type: 'changeTypeDocument',payload:number})
-    }
-
-    const onChangeNumberDocument = (number:string) => {
-        dispatch({type: 'changeNumberDocument',payload:number})
-    }
-
-    const onChangeNames = (number:string) => {
-        dispatch({type: 'changeNames',payload:number})
-    }
-
-    const onChangePaternal = (number:string) => {
-        dispatch({type: 'changePaternal',payload:number})
-    }
-
-    const onChangeMaternal = (number:string) => {
-        dispatch({type: 'changeMaternal',payload:number})
-    }
-
-    const onChangeDateOfBirth = (number:string) => {
-        dispatch({type: 'changeDateBirth',payload:number})
-    }
-
-    const onChangeGender = (number:string) => {
-
-        dispatch({type: 'changeGender',payload:number})
-    }
-
-    const onChangeInsured = (number:string) => {
-        dispatch({type: 'changeInsured',payload:number})
-    }
-
 
     const onSubmitFormPersonal = (e:FormEvent<HTMLFormElement>) => {
         
         
         e.preventDefault();
-        console.log("hola");
+
         
-        history.push('/health-plans')
+
+        if(isValidFormPersonal()){
+           
+        
+            history.push('/health-plans')
+
+        }else{
+            dispatch({type:"changeIsValidFormPersonal",payload:false})
+        }
     }
 
-    console.log(appState);
 
     const BreadCrumbText = <div className="frmpersonal__step">PASO 1 <span className="frmpersonal__totalsteps">DE 7</span></div>
     
@@ -89,6 +68,8 @@ const FormPersonalInformation = () => {
                         onChangeSelect={(e) => onChangeTypeDocument(e.target.value)}
                         label="Nro. de documento"
                         valueselect={appState.documenttype}
+                        isValid={isValidDocumentNumberPersonal.current}
+                        texterror="Complete los campos"
                     />
                 </div>
                 <div className="frmpersonal__row">

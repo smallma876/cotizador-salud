@@ -16,6 +16,9 @@ const INITIAL_STATE: IAppInitialValue = {
     gender:"",
     insured:"",
     namestitular:"",
+
+    isValidFormHome: true,
+    isValidFormPersonal: true
 }
 
 interface props {

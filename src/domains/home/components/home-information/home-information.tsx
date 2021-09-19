@@ -6,6 +6,12 @@ import InputDropdown from '../../../../components/input-dropdown/input-dropdown'
 import InputText from '../../../../components/input-text/input-text'
 import PrimaryButton from '../../../../components/primary-button/primary-button'
 import { AppContext } from '../../../../context/context/context'
+import useChangeFieldsHome from '../../../../hooks/use-change-fieldshome'
+import useCustomer from '../../../../hooks/use-customer'
+
+import useValidFormHome from '../../../../hooks/use-valid-formhome'
+import { Customer } from '../../../../models/customer'
+import { getCustomer } from '../../../../services/services'
 import './home-information.scss'
 
 
@@ -14,39 +20,35 @@ const HomeInformation = () => {
     const history = useHistory();
 
     const { appState, dispatch } = useContext(AppContext);
+    const { setCustomer }  = useCustomer();
+   
+    const { isValidFormHome,isValidDocumentType, isValidDocumentNumber,  
+        isValidMobileNumber,isValidDate, isValidDataProtection,
+        isValidInsured } = useValidFormHome();
 
-    const onChangeMobilePhone = (number:string) => {
-        dispatch({type: 'changeNumberMobile',payload:number})
-    }
+    const { onChangeMobilePhone,  onChangeNumberDocument, onChangeDateOfBirth,
+        onChangeTypeDocument , onChangeSendNews, onChangeDataProtection} = useChangeFieldsHome();
 
-    const onChangeNumberDocument = (number:string) => {
-        dispatch({type: 'changeNumberDocument',payload:number})
-    }
-
-    const onChangeDateOfBirth = (number:string) => {
-        dispatch({type: 'changeDateBirth',payload:number})
-    }
-
-    const onChangeTypeDocument = (number:string) => {
-        dispatch({type: 'changeTypeDocument',payload:number})
-    }
-
-    const onChangeSendNews = (flag:boolean) => {
-        dispatch({type: 'changeSendNews',payload:flag})
-    }
-
-    const onChangeDataProtection = (flag:boolean) => {
-        dispatch({type: 'changeDataProtection',payload:flag})
-    }
-
-    const onSubmitFormHome = (e:FormEvent<HTMLFormElement>) => {
+    const onSubmitFormHome = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log("hola");
         
-        history.push('/personal-information')
+        if(isValidFormHome()){
+            let customer = new Customer();
+
+            const url = process.env.REACT_APP_URL as string;
+            customer = await getCustomer(url);
+    
+            setCustomer( customer );
+            history.push('/personal-information')
+
+        }else{
+         
+            dispatch({type:"changeIsValidFormHome",payload:false})
+        }
+        
     }
     
-    console.log(appState);
+
     
 
     return (
@@ -63,6 +65,8 @@ const HomeInformation = () => {
                         onChangeSelect={(e) => onChangeTypeDocument(e.target.value)}
                         valueselect={appState.documenttype}
                         label="Nro. de documento"
+                        isValid={isValidDocumentNumber.current}
+                        texterror="Complete los campos"
                     />
                 </div>
                 <div className="homeinformation__row">

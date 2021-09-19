@@ -11,4 +11,17 @@ export interface IAppInitialValue {
     maternal:string;
     gender:string;
     insured: string;
+    isValidFormHome: boolean;
+    isValidFormPersonal: boolean;
+}
+
+export interface IFieldsHomeValidValue{
+
+    isValidDocumentType?: boolean;
+    isValidDocumentNumber?: boolean;
+    isValidMobileNumber?: boolean;
+    isValidDate?: boolean;
+    isValidDataProtection?: boolean;
+    isValidInsured?: boolean;
+    isValidFormHome?:boolean;
 }

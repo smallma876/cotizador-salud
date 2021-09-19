@@ -66,6 +66,16 @@ export const appReducer = (state: IAppInitialValue, action: ActionType) => {
             ...state,
             namestitular: action.payload,
           };
+      case "changeIsValidFormHome":
+        return{
+          ...state,
+          isValidFormHome: action.payload
+        }
+        case "changeIsValidFormPersonal":
+          return{
+            ...state,
+            isValidFormPersonal: action.payload
+          }
     default:
       break;
   }

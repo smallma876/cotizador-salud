@@ -11,3 +11,5 @@ export type ActionType =
 | { type: 'changeGender', payload: string}
 | { type: 'changeInsured', payload: string}
 | { type: 'changeNamesTitular', payload: string}
+| { type: 'changeIsValidFormHome', payload: boolean}
+| { type: 'changeIsValidFormPersonal', payload: boolean}
