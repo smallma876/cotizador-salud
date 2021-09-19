@@ -1,0 +1,51 @@
+$primary-color: #2f80ed;
+
+.frmpersonal{
+  
+    color: black;
+    margin-top: 6em;
+    padding: 0 2em;
+
+    &__subtitle2{
+        font-weight: 300;
+    }
+
+    &__step{
+        color: $primary-color;
+    }
+
+    &__totalsteps{
+        color: #bbb;
+    }
+
+    &__breadcrumb{
+        margin-left: -2.4rem;
+        margin-bottom: 3em;
+    }
+
+    &__title{
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0 0 .5em 0;
+    }
+
+    &__highlighted{
+        color: $primary-color;
+        font-weight: 400;
+    }
+
+    &__subtitle{
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 1.5em;
+    }
+
+    &__row{
+        margin-bottom: 1.5em;
+    }
+
+    &__right{
+        display: flex;
+        justify-content: right;
+    }
+}

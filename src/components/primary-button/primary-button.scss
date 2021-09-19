@@ -1,0 +1,16 @@
+$primary-color: #2f80ed;
+
+
+.primarybutton{
+    color: #FFF;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid $primary-color;
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 2em;
+    font-weight: 500;
+    cursor: pointer;
+}

@@ -1,0 +1,65 @@
+.inputradio{
+    &__label {
+        display: block;
+        position: relative;
+        padding-left: 21px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 1rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        height: 13px;
+    }
+
+    &__label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 13px;
+        width: 13px;
+        background-color: #FFF;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+    }
+
+    &__label:hover input ~ &__checkmark {
+        background-color: #ccc;
+    }
+
+    &__label input:checked ~ &__checkmark {
+        border: 1px solid green;
+    }
+
+    &__checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    &__label input:checked ~ &__checkmark:after {
+        display: block;
+      }
+
+      &__label &__checkmark:after {
+        top: 1.7px;
+        left: 1.5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: green;
+      }
+}
+
+  
+
+  

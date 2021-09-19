@@ -1,0 +1,58 @@
+$height-banner: 80vh;
+$width-banner: 90%;
+$primary-color: #2f80ed;
+
+.bannerleft{
+    position: relative;
+    height: $height-banner;
+    width: $width-banner;
+
+    &__content{
+        z-index: 10000;
+        position: relative;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image{
+        background-image: url('./../../assets/images/png/Illustration-1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: calc(100% - 60%);
+        left: calc(100% - 130px);
+        height: 54%;
+        width: 230px;
+        z-index: 100000000000;
+    }
+
+    &:before{
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        background: $primary-color;
+        height: $height-banner;
+        position: absolute;
+        z-index: 100;
+        border-bottom-right-radius: 50px;
+    }
+
+    &:after{
+        top: 0;
+        right: -30px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 30px solid $primary-color;
+        border-top: 0 solid transparent;
+        border-bottom: calc($height-banner - 10vh) solid transparent;
+        position: absolute;
+        z-index: 100;
+       
+    }
+
+}
+
