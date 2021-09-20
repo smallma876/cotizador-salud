@@ -13,6 +13,7 @@ export interface IAppInitialValue {
     insured: string;
     isValidFormHome: boolean;
     isValidFormPersonal: boolean;
+    planselected:string;
 }
 
 export interface IFieldsHomeValidValue{
@@ -24,4 +25,14 @@ export interface IFieldsHomeValidValue{
     isValidDataProtection?: boolean;
     isValidInsured?: boolean;
     isValidFormHome?:boolean;
+}
+
+export interface IPlan{
+
+    title: string;
+    coin: string;
+    amount: string;
+    period: string;
+    value: string;
+    name: string;
 }

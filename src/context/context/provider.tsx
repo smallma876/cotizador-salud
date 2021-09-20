@@ -17,6 +17,8 @@ const INITIAL_STATE: IAppInitialValue = {
     insured:"",
     namestitular:"",
 
+    planselected:"",
+
     isValidFormHome: true,
     isValidFormPersonal: true
 }

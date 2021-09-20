@@ -76,6 +76,13 @@ export const appReducer = (state: IAppInitialValue, action: ActionType) => {
             ...state,
             isValidFormPersonal: action.payload
           }
+
+        case "changePlan": {
+          return {
+            ...state,
+            planselected: action.payload
+          }
+        }
     default:
       break;
   }

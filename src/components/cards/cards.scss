@@ -1,0 +1,57 @@
+.customcards{
+
+    font-size: .7rem;
+
+    &__label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    &__checkmark{
+        width: 1.2rem;
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        display: none;
+    }
+
+    &__children{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+/*     &__label:hover{
+        display: block;
+        border: 1px solid green;
+    } */
+
+    .customcards--selected &__label{
+        display: block;
+        border: 1px solid green;
+    }
+
+    &__label input:checked ~ &__checkmark {
+        display: block;
+    }
+
+    &__label {
+        position: relative;
+        cursor: pointer;
+        
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid #bbb;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 1rem;
+        display: block;
+    }
+}

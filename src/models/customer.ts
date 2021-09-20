@@ -13,6 +13,7 @@ export class Customer implements IAppInitialValue{
     maternal: string;
     gender: string;
     insured: string;
+    planselected: string;
     isValidFormHome: boolean;
     isValidFormPersonal: boolean;
 }
