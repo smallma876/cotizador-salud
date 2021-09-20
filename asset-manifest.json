@@ -1,0 +1,35 @@
+{
+  "files": {
+    "static/js/0.c2540d31.chunk.js": "/cotizador-salud/static/js/0.c2540d31.chunk.js",
+    "static/js/0.c2540d31.chunk.js.map": "/cotizador-salud/static/js/0.c2540d31.chunk.js.map",
+    "main.css": "/cotizador-salud/static/css/main.e5174c9a.chunk.css",
+    "main.js": "/cotizador-salud/static/js/main.e77a3a30.chunk.js",
+    "main.js.map": "/cotizador-salud/static/js/main.e77a3a30.chunk.js.map",
+    "runtime-main.js": "/cotizador-salud/static/js/runtime-main.bdc3f27f.js",
+    "runtime-main.js.map": "/cotizador-salud/static/js/runtime-main.bdc3f27f.js.map",
+    "static/js/3.4aea4480.chunk.js": "/cotizador-salud/static/js/3.4aea4480.chunk.js",
+    "static/js/3.4aea4480.chunk.js.map": "/cotizador-salud/static/js/3.4aea4480.chunk.js.map",
+    "static/css/4.69b2bd40.chunk.css": "/cotizador-salud/static/css/4.69b2bd40.chunk.css",
+    "static/js/4.e06f0ce3.chunk.js": "/cotizador-salud/static/js/4.e06f0ce3.chunk.js",
+    "static/js/4.e06f0ce3.chunk.js.map": "/cotizador-salud/static/js/4.e06f0ce3.chunk.js.map",
+    "static/css/5.7de6bbff.chunk.css": "/cotizador-salud/static/css/5.7de6bbff.chunk.css",
+    "static/js/5.bdb79051.chunk.js": "/cotizador-salud/static/js/5.bdb79051.chunk.js",
+    "static/js/5.bdb79051.chunk.js.map": "/cotizador-salud/static/js/5.bdb79051.chunk.js.map",
+    "static/css/6.02c513c8.chunk.css": "/cotizador-salud/static/css/6.02c513c8.chunk.css",
+    "static/js/6.64403870.chunk.js": "/cotizador-salud/static/js/6.64403870.chunk.js",
+    "static/js/6.64403870.chunk.js.map": "/cotizador-salud/static/js/6.64403870.chunk.js.map",
+    "index.html": "/cotizador-salud/index.html",
+    "static/css/4.69b2bd40.chunk.css.map": "/cotizador-salud/static/css/4.69b2bd40.chunk.css.map",
+    "static/css/5.7de6bbff.chunk.css.map": "/cotizador-salud/static/css/5.7de6bbff.chunk.css.map",
+    "static/css/6.02c513c8.chunk.css.map": "/cotizador-salud/static/css/6.02c513c8.chunk.css.map",
+    "static/css/main.e5174c9a.chunk.css.map": "/cotizador-salud/static/css/main.e5174c9a.chunk.css.map",
+    "static/js/0.c2540d31.chunk.js.LICENSE.txt": "/cotizador-salud/static/js/0.c2540d31.chunk.js.LICENSE.txt",
+    "static/js/3.4aea4480.chunk.js.LICENSE.txt": "/cotizador-salud/static/js/3.4aea4480.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bdc3f27f.js",
+    "static/js/3.4aea4480.chunk.js",
+    "static/css/main.e5174c9a.chunk.css",
+    "static/js/main.e77a3a30.chunk.js"
+  ]
+}

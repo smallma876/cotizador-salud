@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.scss"],"names":[],"mappings":"AAAA,EACI,qBAAA,CAGJ,KACI,cAAA,CAGJ,KACI,YAAA,CACA,QAAA,CACA,6BAAA","file":"main.e5174c9a.chunk.css","sourcesContent":["*{\r\n    box-sizing: border-box;\r\n}\r\n\r\nhtml{\r\n    font-size: 10px;\r\n}\r\n\r\nbody{\r\n    height: 100vh;\r\n    margin: 0;\r\n    font-family: 'Lato', sans-serif;\r\n}"]}
