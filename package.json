@@ -1,6 +1,7 @@
 {
   "name": "cotizador-salud",
   "version": "0.1.0",
+  "homepage": "http://smallma876.github.io/cotizador-salud",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
@@ -23,6 +24,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
